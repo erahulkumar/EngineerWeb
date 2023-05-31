@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+@model DTO.UserDTO
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineer Academy</title>
+    <link href="~/Areas/Admin/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Areas/Admin/Content/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Admin Log in Panel</h3>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">#</span>
+                                <input type="text" class="form-control" placeholder="Username" name="Username" />
+                            </div>
+                            @Html.ValidationMessageFor(x => x.Username)
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">$</span>
+                                <input type="password" class="form-control" placeholder="Password" name="Password" />
+                            </div>
+                            @Html.ValidationMessageFor(x => x.Password)
+                            <button type="submit" class="btn btn-success">Log in</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
